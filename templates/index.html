@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Database</title>
+</head>
+<body>
+    <h1>Student Database</h1>
+
+    <a href="/add">Add New Student</a>
+
+    <h2>Students List</h2>
+    <ul>
+        {% for student in students %}
+            <li>
+                <a href="/student/{{ student[0] }}">
+                    {{ student[1] }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
